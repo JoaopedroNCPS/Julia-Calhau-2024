@@ -1,0 +1,13 @@
+
+int main()
+{
+   int x, y, z;
+   printf("\t Digite o X : ");
+   scanf("%d",&x);
+
+   printf("\t Digite o Y : ");
+   scanf("%d",&y);
+    z = x + y;
+   printf("\t A Soma de x + y = %d", z);
+   return 0;
+}
