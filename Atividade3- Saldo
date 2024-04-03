@@ -1,0 +1,16 @@
+#include <stdio.h>
+int main() {
+    char Nome[50]; 
+    int Ganhos, Gastos, Saldo;
+    printf("\n Escreva seu nome:");
+    scanf("%s", Nome);
+    printf("\n Escreva seus ganhos:");
+    scanf("%d", &Ganhos);
+    printf("\n Escreva seus Gastos:");
+    scanf("%d", &Gastos);
+    Saldo = Ganhos - Gastos;  
+    printf("seu nome:%s", Nome);
+	printf("\n seu saldo é = %d", Saldo);
+	return 0;
+	
+}
