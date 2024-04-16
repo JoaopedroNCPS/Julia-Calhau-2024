@@ -1,0 +1,14 @@
+
+#include <iostream>
+
+int main()
+{
+   int AnoNascimento;
+   printf("Digite seu Ano de nascimento:\n");
+   scanf("%d",&AnoNascimento);
+      if (AnoNascimento<=2006){
+       printf("Pode Votar");
+   }else{
+       printf("Não pode Votar");
+   }
+}
