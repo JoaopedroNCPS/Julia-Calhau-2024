@@ -1,0 +1,14 @@
+#include <iostream>
+
+int main()
+{
+   int Senha;
+   printf("Digite a Senha:\n");
+   scanf("%d",&Senha);
+   
+   if (Senha == 1234){
+    printf("ACESSO PERMITIDO");
+   }else{
+       printf("ACESSO NEGADO");
+   }
+}
