@@ -1,0 +1,16 @@
+#include <iostream>
+
+int main()
+{
+   float Quantidade, Resultado;
+   printf("\t Digite a Quantidade de Maças \n");
+   scanf("%f",&Quantidade);
+   if (Quantidade<=12){
+       Resultado=Quantidade*0.25;
+          printf("Resultado = %.1f ",Resultado);
+  
+   }else{
+   Resultado=Quantidade*0.30;
+   printf("Resultado = %.1f ",Resultado);
+   }
+}
