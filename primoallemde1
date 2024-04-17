@@ -1,0 +1,28 @@
+#include <stdio.h>
+
+int main() {
+    int a, i, divisivel = 0;
+    
+    printf("Digite um numero: \n");
+    scanf("%d", &a);
+    
+    printf("outros numeros que dividem por %d além de 1 é: %d \n", a, a);
+    
+    for (i = 2; i < a; i++) {
+        if (a % i == 0) {
+            printf("%d\n", i);
+            divisivel = 1;
+        }
+    }
+    
+    if (divisivel == 0) {
+        printf(" é primo\n");
+    } else {
+        printf(" Não é primo\n");
+    }
+
+    return 0;
+}
+
+}
+            
