@@ -1,0 +1,21 @@
+#include <stdio.h>
+
+int main() {
+    int a, i, contador = 0;
+    printf("Digite um numero :\n");
+    scanf("%d", &a);
+    
+    for (i = 1; i <= a; i++) {
+        if (a % i == 0) {
+            contador++;
+        }
+    }
+    
+    if (contador == 2) {
+        printf("É Primo!!\n");
+    } else {
+        printf("Não é Primo\n");
+    }
+
+    return 0;
+}
