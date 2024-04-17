@@ -1,0 +1,17 @@
+#include <stdio.h>
+
+int main()
+{
+   int candidato1, candidato2, candidato3, eleitores, resultado1, resultado2, resultado3;
+   printf("Numero de Eleitores:\n");
+   scanf("%d",&eleitores);
+   resultado1 = eleitores /2;
+   printf("Votos no candidato1:%d \n", resultado1);
+   resultado2 = resultado1 /2;
+   printf("Votos no candidato2:%d \n", resultado2);
+   resultado3 = resultado1 /2;
+   printf("Votos no candidato3:%d \n", resultado3);
+   
+   return 0;
+   
+}
