@@ -1,0 +1,19 @@
+#include <stdio.h>
+
+int main()
+{
+   int Idade, Pessoa1, Pessoa2, Pessoa3, Resultado,Media;
+   printf("Digite suas Idades:\n");
+   scanf("%d %d %d", &Pessoa1, &Pessoa2, &Pessoa3);
+   Idade = Pessoa1 + Pessoa2 + Pessoa3;
+   Media = Idade/3;
+      if (Media>= 60){
+       printf("Idoso");
+   }else if (Media >=18) {
+       printf("Adulto");
+   }else if (Media <=17) {
+       printf("Jovem");
+   }
+   return 0;
+   
+}
