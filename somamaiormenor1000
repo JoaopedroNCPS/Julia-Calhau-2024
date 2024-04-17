@@ -1,0 +1,28 @@
+
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    printf("Digite dois numeros :\n");
+    scanf("%d %d", &a, &b);
+   if (a>b){
+       printf("A é maior\n");
+       printf("B é menor\n");
+   }else{
+       printf("B é maior\n");
+       printf("A é menor\n");
+   }
+   if (a>1000){
+       printf("Numero Invalido\n");
+   }else if (b>1000){
+       printf("Numero Invalido\n");
+   }
+   c = a + b; 
+   
+   if (a>1000 || b>1000){
+        printf("Valor como Dito é Invalido");
+    }else if (a<1000 || b<1000) {
+        printf("Mas a soma dos dois é igual a = %d", c);
+    }
+    return 0;
+}
