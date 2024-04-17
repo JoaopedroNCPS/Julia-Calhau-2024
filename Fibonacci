@@ -1,0 +1,23 @@
+
+#include <stdio.h>
+#include <iostream>
+using namespace std;
+
+int main()
+{
+    int a, b, resultado, i;
+    b = 1;
+    a = 0;
+    resultado= a + b;
+    printf("re= %d", resultado);
+    printf("\n");
+    a = 1;
+    resultado= resultado + b * i;
+    for (int i = 0; i < 10; ++i) {
+        resultado = a + b;
+        cout << "resultado = " << resultado << "\n";
+        a = b;
+        b = resultado;
+    }
+    return 0;
+}
