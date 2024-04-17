@@ -1,0 +1,18 @@
+
+#include <stdio.h>
+
+int main() {
+    int a, b, c;
+    printf("Digite dois numeros :\n");
+    scanf("%d %d", &a, &b);
+   if (a>b){
+       printf("A é maior\n");
+       printf("B é menor\n");
+   }else{
+       printf("B é maior\n");
+       printf("A é menor\n");
+   }
+   c = a + b; 
+   printf("Mas a soma dos dois é igual a = %d", c);
+    return 0;
+}
