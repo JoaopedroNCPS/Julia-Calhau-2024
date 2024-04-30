@@ -7,7 +7,7 @@ int main() {
         printf("Digite uma nota de 0 a 10: ");
         scanf("%d", &nota);
         
-        if (nota >= 0 && nota <= 10) { // Corrigindo a condição aqui
+        if (nota >= 0 && nota <= 10) { 
             printf("Nota Valida\n");
             break;
         } else {
