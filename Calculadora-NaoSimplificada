@@ -1,0 +1,38 @@
+int main() {
+    char opera[50];
+    int a, b, c, cov;
+    printf("Digite Dois Numeros:\n");
+    scanf("%d %d", &a, &b);
+    printf("Agora, Digite uma Operação Matematica:\n");
+    scanf("%s", opera);
+    
+    if (strcmp(opera, "+") == 0) {
+        cov = 1;
+    } else if (strcmp(opera, "-") == 0) {
+        cov = 2;
+    } else if (strcmp(opera, "*") == 0) {
+        cov = 3;
+    } else if (strcmp(opera, "/") == 0) {
+        cov = 4;
+    }
+
+    switch (cov) {
+        case 1:
+            c = a + b;
+            printf("a + b = %d\n", c);
+            break;
+        case 2:
+            c = a - b;
+            printf("a - b = %d\n", c);
+            break;
+        case 3:
+            c = a * b;
+            printf("a * b = %d\n", c);
+            break;
+        case 4:
+            c = a / b;
+            printf("a / b = %d\n", c);
+            break;
+    }
+    return 0;
+}
