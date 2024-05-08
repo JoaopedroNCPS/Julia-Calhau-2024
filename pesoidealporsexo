@@ -2,20 +2,20 @@
 
 int main() {
     int sexo, peso;
-    float resultado;
-    printf("Digite seu Peso: ");
-    scanf("%d", &peso);    
+    float resultado, altura;
+    printf("Digite sua altura: ");
+    scanf("%f", &altura);    
     printf("Digite seu Sexo com 1 ou 2, e veja seu peso ideal:\n1-Feminino\n2-Masculino\n");
     scanf("%d", &sexo);
     
     switch (sexo) {
         case 1:
-            resultado = (peso - 100) * 0.85;
-            printf("Seu peso ideal é= %.2f\n", resultado); 
+            peso = (62.1 * altura) - 44.7;
+            printf("Seu peso ideal é= %d\n", peso); 
             break;
         case 2:
-            resultado = (peso - 100) * 0.9;
-            printf("Seu peso ideal é= %.2f\n", resultado); 
+            peso = (72.7 * altura) - 58;
+            printf("Seu peso ideal é= %d\n", peso); 
             break;
     }
     
