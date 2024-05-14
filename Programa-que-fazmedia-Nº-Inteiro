@@ -1,0 +1,29 @@
+#include <stdio.h>
+
+int main() {
+    float numero;
+    int quant = 0;
+    float media = 0.0;
+
+ for (;;) {
+        printf("Digite um numero: ");
+        scanf("%f", &numero);
+
+        if (numero > 0) {
+            quant++;
+            media += (numero - media) / quant;
+        } else if (numero == 0) {
+            if (quant == 0) {
+                printf("Numero Invalido\n");
+            } else {
+                printf("%d Numeros para chegar a 0\n", quant);
+                printf("A Media deles: %.2f\n", media);
+            }
+            break;
+        } else {
+            printf("Por favor, digite um numero maior que zero.\n");
+        }
+    }
+
+    return 0;
+}
