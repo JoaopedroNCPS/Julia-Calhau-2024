@@ -1,0 +1,68 @@
+#include <stdio.h>
+
+int main() {
+    int votosSteveJobs = 0, votosBillGates = 0, votosLinusTorvalds = 0, votosNulo = 0, votosBranco = 0;
+    int voto;
+
+    printf("As opcoes sao:\n");
+    printf("1. Candidato Steve Jobs\n");
+    printf("2. Candidato Bill Gates\n");
+    printf("3. Candidato Linus Torvalds\n");
+    printf("4. Nulo\n");
+    printf("5. Branco\n");
+
+ for (;;) {
+        printf("\nVoce volta em....: ");
+        scanf("%d", &voto);
+
+        if (voto >= 1 && voto <= 5) {
+            switch (voto) {
+                case 1:
+                    votosSteveJobs++;
+                    break;
+                case 2:
+                    votosBillGates++;
+                    break;
+                case 3:
+                    votosLinusTorvalds++;
+                    break;
+                case 4:
+                    votosNulo++;
+                    break;
+                case 5:
+                    votosBranco++;
+                    break;
+            }
+        } else if (voto == 6) {
+            break;
+        } else {
+            printf("Valor invalido\n");
+        }
+    }
+
+    int totalVotos = votosSteveJobs + votosBillGates + votosLinusTorvalds + votosNulo + votosBranco;
+
+    printf("\nResultados:\n");
+    printf("a) Numero de votos de cada candidato:\n");
+    printf("   Steve Jobs: %d\n", votosSteveJobs);
+    printf("   Bill Gates: %d\n", votosBillGates);
+    printf("   Linus Torvalds: %d\n", votosLinusTorvalds);
+    printf("   Nulo: %d\n", votosNulo);
+    printf("   Branco: %d\n", votosBranco);
+
+    printf("b) Porcentagem de votos nulos: %.2f%%\n", (float)votosNulo / totalVotos * 100);
+    printf("c) Porcentagem de votos brancos: %.2f%%\n", (float)votosBranco / totalVotos * 100);
+
+    printf("d) Candidato vencedor: ");
+    if (votosSteveJobs > votosBillGates && votosSteveJobs > votosLinusTorvalds) {
+        printf("Steve Jobs\n");
+    } else if (votosBillGates > votosSteveJobs && votosBillGates > votosLinusTorvalds) {
+        printf("Bill Gates\n");
+    } else if (votosLinusTorvalds > votosSteveJobs && votosLinusTorvalds > votosBillGates) {
+        printf("Linus Torvalds\n");
+    } else {
+        printf("Empate\n");
+    }
+
+    return 0;
+}
