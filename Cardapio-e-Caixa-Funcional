@@ -1,0 +1,62 @@
+#include <stdio.h>
+
+int main() {
+    int codigos_0 = 100, codigos_1 = 101, codigos_2 = 102, codigos_3 = 103, codigos_4 = 104, codigos_5 = 105;
+    double precos_0 = 1.70, precos_1 = 2.30, precos_2 = 2.60, precos_3 = 2.40, precos_4 = 2.50, precos_5 = 1.00;
+    int quantidade_0 = 0, quantidade_1 = 0, quantidade_2 = 0, quantidade_3 = 0, quantidade_4 = 0, quantidade_5 = 0; 
+    int codigo;
+    int totalItens = 6;
+
+    printf("Cardapio:\n");
+    printf("Codigo  Preco\n");
+    printf("%-8d R$ %.2f\n", codigos_0, precos_0);
+    printf("%-8d R$ %.2f\n", codigos_1, precos_1);
+    printf("%-8d R$ %.2f\n", codigos_2, precos_2);
+    printf("%-8d R$ %.2f\n", codigos_3, precos_3);
+    printf("%-8d R$ %.2f\n", codigos_4, precos_4);
+    printf("%-8d R$ %.2f\n", codigos_5, precos_5);
+
+ for (;;) {
+        printf("\nDigite o codigo do item que quer: ");
+        printf("\n0 Para finalizar a Sua Compra: ");
+        scanf("%d", &codigo);
+        if (codigo == 0) {
+            break;
+        }
+        int encontrado = 0;
+        if (codigo == codigos_0) {
+            printf("Digite a quantidade  %d: ", codigos_0);
+            scanf("%d", &quantidade_0);
+            encontrado = 1;
+        } else if (codigo == codigos_1) {
+            printf("Digite a quantidade  %d: ", codigos_1);
+            scanf("%d", &quantidade_1);
+            encontrado = 1;
+        } else if (codigo == codigos_2) {
+            printf("Digite a quantidade  %d: ", codigos_2);
+            scanf("%d", &quantidade_2);
+            encontrado = 1;
+        } else if (codigo == codigos_3) {
+            printf("Digite a quantidade  %d: ", codigos_3);
+            scanf("%d", &quantidade_3);
+            encontrado = 1;
+        } else if (codigo == codigos_4) {
+            printf("Digite a quantidade  %d: ", codigos_4);
+            scanf("%d", &quantidade_4);
+            encontrado = 1;
+        } else if (codigo == codigos_5) {
+            printf("Digite a quantidade  %d: ", codigos_5);
+            scanf("%d", &quantidade_5);
+            encontrado = 1;
+        }
+        if (encontrado == 0) {
+            printf("Valor Invalido.\n");
+        }
+    }
+
+    double total = quantidade_0 * precos_0 + quantidade_1 * precos_1 + quantidade_2 * precos_2 + quantidade_3 * precos_3 + quantidade_4 * precos_4 + quantidade_5 * precos_5;
+
+    printf("Total a pagar: R$ %.2f\n", total);
+
+    return 0;
+}
