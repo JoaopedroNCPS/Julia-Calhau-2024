@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Movendo Texto com Teclas</title>
+    <style>
+        #moving-text {
+            position: absolute;
+            left: 0;
+            top: 0; /* Posição inicial do texto */
+            transition: left 0.1s linear, top 0.1s linear; /* Transição suave */
+        }
+        #WA {
+            position: absolute;
+            left: 0;
+            top: 0; /* Posição inicial do texto */
+        }          
+    </style>
+</head>
+<body>
+    <h1 id="moving-text">Texto Móvel</h1>
+    <h1 id="WA"><font color="Grey"><b>+</b></font></h1>
+    
+    <script>
+        let textElement = document.getElementById('moving-text');
+        let textElemento = document.getElementById('WA');
+        let moveInterval;
+        let position = { x: 0, y: 0 };
+        const moveSpeed = 100; // Velocidade do movimento em pixels por intervalo
+
+        document.addEventListener('keydown', (event) => {
+            if (event.key === 'w') {
+                position.y -= moveSpeed; // Move para cima
+            } else if (event.key === 'a') {
+                position.x -= moveSpeed; // Move para esquerda
+            } else if (event.key === 's') {
+                position.y += moveSpeed; // Move para baixo
+            } else if (event.key === 'd') {
+                position.x += moveSpeed; // Move para direita
+            }
+            if (!moveInterval) {
+                moveInterval = setInterval(updatePosition, 0.001); // Atualiza a cada 100ms
+            }
+        });
+        function updatePosition() {
+            textElement.style.left = `${position.x}px`;
+            textElement.style.top = `${position.y}px`;
+            textElemento.style.left = `${position.x}px`;
+            textElemento.style.top = `${position.y}px`;
+        }
+    </script>
+</body>
+</html>

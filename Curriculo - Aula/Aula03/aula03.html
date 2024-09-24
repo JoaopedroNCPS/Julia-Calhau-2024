@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aula 03</title>
+</head>
+<body>
+    <form action ="" method="">
+
+        <label for="nome">Nome Completo</label>
+        <input type="text" id="nome" placeholder="Insira seu nome" required/>
+        <br>
+        <label for="datanasc">Data de Nascimento</label>
+        <input id="datanasc" type="date" required/>
+        <br>
+        <br>
+        <label for="indica">Você nos indicaria?</label>
+        <input id="indica" type="number" min="1" max="5">
+        <br>
+        <br>
+        <label for="email">E-mail</label>
+        <input id="email" type="email" placeholder="Informe seu E-mail"/>
+        <br>
+        <br>
+        <label for="cor">Cor Favorita</label>
+        <input id="cor" type="color" />
+        <br>
+        <br>
+        <label for="volume">Em qual volume você ouve música (0 a 100)</label>
+        <input id="volume" type="range" min="0" max="100" />
+        <br>
+        <br>
+        <fieldset>
+            <legend>Genero</legend>
+            <input type="radio" id="masc" name="genero" />
+            <label for="masc">Masculino</label>
+            <input type="radio" id="fem" name="genero" />
+            <label for="fem">Feminino</label>
+            <input type="radio" id="outros" name="genero" />
+            <label for="outros">Outros...</label>
+        </fieldset>
+        <br>
+        <fieldset>
+            <legend>Monte seu Lanche</legend>
+            <input type="checkbox" id="paa" />
+            <label for="paa">Pão</label>
+            <br>
+            <input type="checkbox" id="salada" />
+            <label for="salada">Salada</label>
+            <br>
+            <input type="checkbox" id="hambu" />
+            <label for="hambu">Hamburguer</label>
+            <br>
+            <input type="checkbox" id="bac" />
+            <label for="bac">Bacon</label>
+            <br>
+            <input type="checkbox" id="mc" />
+            <label for="mc">Maionese Caseira</label>
+            <br>
+            <input type="checkbox" id="pa" />
+            <label for="pa">Pão</label>
+        </fieldset>
+        <br>
+        <label for="info">Informações Adicionais</label><br>
+        <textarea id="info"></textarea>
+        <label for="senha">Senha</label>
+        <input id="senha" type="password" />
+        <br>
+        <label for="cidade">Informe a Cidade</label>
+        <select id="Cidade">
+            <option>Jaguariuna</option>
+            <option>Pedreira</option>
+            <option>Amparo</option>
+            <option>Campinas</option>
+            <option>Holambra</option>
+        </select>
+        <br>
+        <input type="reset" value="limpar Form" />
+        <input type="submit" />
+    </form>
+</body>
+</html>

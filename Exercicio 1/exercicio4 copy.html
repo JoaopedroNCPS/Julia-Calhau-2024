@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Somando </title>
+    <style>
+        body {font:12pt Comic Sans MS;}
+        button {font-size: 12pt;padding:30px; border-radius: 2px;}
+    </style>
+</head>
+<body background='https://i.pinimg.com/564x/52/17/db/5217dbb25dd1eedea99afc1016f80bac.jpg'>
+    <center><h1><font face = "Bahnschrift" color="#7B68EE"> DOIS NUMEROS</font></h1></center> 
+    <button onclick="somar()">Iniciar a soma</button>
+    <section id="res">
+    <p>O Resultado bem aqui.....</p>
+    </section>
+    <script>
+        function somar(){
+            let n1 = Number(window.prompt('Digite um Numero!!'))
+            let n2 = Number(window.prompt('Digita outro'))
+            let n3 = Number(window.prompt('outro...'))
+            let n4 = Number(window.prompt('O ULTIMO!'))
+
+            soma = n1+n2+n3+n4
+            med = soma/3
+
+            let res = document.querySelector('section#res')
+            res.innerHTML = `<p> A Media entre <mark>${n1}</mark>, <mark> ${n2}</mark>, <mark> ${n3}</mark>, <mark> ${n4}</mark> é <strong>${med}</strong>!</p>`
+        }
+    </script>
+</body>
+</html>
