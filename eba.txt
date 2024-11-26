@@ -1,0 +1,68 @@
+CREATE DATABASE IF NOT EXISTS CondominioSenai;
+USE CondominioSenai;
+
+CREATE TABLE Condominio (
+    id INT PRIMARY KEY AUTO_INCREMENT,
+    nome VARCHAR(100) NOT NULL,
+    endereco VARCHAR(50) NOT NULL,
+    CNPJ INT NOT NULL
+);
+CREATE TABLE Apartamentos (
+    id_ap INT PRIMARY KEY AUTO_INCREMENT,
+    id_cond INT,
+    andar INT NOT NULL,
+    bloco INT NOT NULL,
+    numero INT NOT NULL,
+    nome VARCHAR(100) NOT NULL,
+    endereco VARCHAR(50) NOT NULL,
+    CNPJ INT NOT NULL
+);
+CREATE TABLE Funcionarios (
+    id_func INT PRIMARY KEY AUTO_INCREMENT,
+    id_cond INT,
+    nome VARCHAR(100) NOT NULL,
+    cargo VARCHAR(50) NOT NULL,
+    Data_Admissao DATE NOT NULL,
+    CPF INT NOT NULL
+);
+CREATE TABLE Moradores (
+    id_mor INT PRIMARY KEY AUTO_INCREMENT,
+    id_ap INT,
+    idade INT,
+    nome VARCHAR(100) NOT NULL,
+    Nascimento DATE NOT NULL,
+    CPF INT NOT NULL,
+    Telefone INT NOT NULL
+);
+
+INSERT INTO Condominio (nome, endereco, CNPJ) 
+VALUES 
+('Condominio Jardim das Flores', 'Rua das Palmeiras, 123', 12345678000123),
+('Condominio Solar do Parque', 'Avenida Brasil, 456', 23456789000145),
+('Condominio Vila Real', 'Rua do Sol, 789', 34567890000167),
+('Condominio Imperial', 'Avenida Europa, 1011', 45678901000189),
+('Condominio Parque das Águas', 'Rua das Acácias, 1213', 56789012000101);
+
+INSERT INTO Apartamentos (id_cond, andar, bloco, numero, nome, endereco, CNPJ) 
+VALUES 
+(1, 3, 2, 301, 'Apartamento 301', 'Rua das Palmeiras, 123', 12345678000123),
+(1, 5, 1, 502, 'Apartamento 502', 'Rua das Palmeiras, 123', 12345678000123),
+(2, 2, 3, 203, 'Apartamento 203', 'Avenida Brasil, 456', 23456789000145),
+(3, 4, 1, 401, 'Apartamento 401', 'Rua do Sol, 789', 34567890000167),
+(4, 6, 2, 604, 'Apartamento 604', 'Avenida Europa, 1011', 45678901000189);
+
+INSERT INTO Funcionarios (id_cond, nome, cargo, Data_Admissao, CPF) 
+VALUES 
+(1, 'Carlos Silva', 'Zelador', '2020-03-15', 12345678901),
+(2, 'Ana Souza', 'Portaria', '2021-07-22', 23456789012),
+(3, 'Ricardo Oliveira', 'Administrador', '2019-05-30', 34567890123),
+(4, 'Julia Santos', 'Vigilante', '2022-01-12', 45678901234),
+(5, 'Fabio Costa', 'Jardineiro', '2018-11-05', 56789012345);
+
+INSERT INTO Moradores (id_ap, idade, nome, Nascimento, CPF, Telefone) 
+VALUES 
+(1, 30, 'Mariana Costa', '1993-02-17', 98765432101, 11987654321),
+(2, 25, 'Gabriel Oliveira', '1998-11-03', 12345678901, 21987654321),
+(3, 40, 'Joana Silva', '1983-08-22', 23456789012, 31987654321),
+(4, 35, 'Lucas Pereira', '1988-06-10', 34567890123, 41987654321),
+(5, 28, 'Renata Santos', '1995-04-15', 45678901234, 51987654321);
